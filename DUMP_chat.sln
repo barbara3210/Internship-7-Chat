@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DUMP_chat", "DUMP_chat\DUMP_chat.csproj", "{C9666FC6-DF90-468A-B724-8FA02A4B5838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.presentation", "DUMP_chat\Chat.presentation.csproj", "{C9666FC6-DF90-468A-B724-8FA02A4B5838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.data", "Chat.data\Chat.data.csproj", "{A3D0060B-F3C5-4C58-BC6C-F4F5C8171992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.data", "Chat.data\Chat.data.csproj", "{A3D0060B-F3C5-4C58-BC6C-F4F5C8171992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.domain", "Chat.domain\Chat.domain.csproj", "{7C292796-E485-421A-A818-F6AA37F3783B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.domain", "Chat.domain\Chat.domain.csproj", "{7C292796-E485-421A-A818-F6AA37F3783B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
