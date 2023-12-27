@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Chat.data.Entities.Models
 {
-    public class Messages
+    public class Message
     {
+        public Message(int sender, int recipient, string message, DateTime date)
+        {
+            SenderUserId = sender;
+            RecipientUserId = recipient;
+            MessageContent = message;
+            Time = date;
 
-        public int MessageId { get; set; }
-        public int ChannelId { get; set; }
+        }
+
+        public int Id { get; set; }
         public int SenderUserId { get; set; }
         public int RecipientUserId { get; set; }
         public string MessageContent { get; set; }

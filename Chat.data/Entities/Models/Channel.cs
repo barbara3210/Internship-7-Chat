@@ -8,7 +8,13 @@ namespace Chat.data.Entities.Models
 {
     public class Channel
     {
-        public int ChannelId { get; set; }
+        public Channel(string name, int creator)
+        {
+            ChannelName = name;
+            CreatorUserId = creator;
+
+        }
+        public int Id { get; set; }
         public string ChannelName { get; set; }
         public int CreatorUserId { get; set; }
     }
