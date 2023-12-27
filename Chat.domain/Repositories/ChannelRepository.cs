@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Chat.data.Entities;
+using Chat.data.Entities.Models;
+using Chat.domain.Enums;
 
 namespace Chat.domain.Repositories
 {
-    internal class ChannelRepository
+    public class ChannelRepository : BaseRepository
     {
+        public ChannelRepository(ChatDbContext dbContext) : base(dbContext)
+        {
+        }
+
+        public ResponseResultType Add(ChatChannel channel)
+        {
+            DbContext.Channels.Add(channel);
+
+            return SaveChanges();
+        }
     }
 }

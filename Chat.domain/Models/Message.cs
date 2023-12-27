@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Chat.data.Entities.Models;
 
 namespace Chat.domain.Models
 {
     public class Message
     {
-        public int MessageId { get; set; }
+        public int Id { get; set; }
         public int ChannelId { get; set; }
         public int SenderUserId { get; set; }
         public int RecipientUserId { get; set; }

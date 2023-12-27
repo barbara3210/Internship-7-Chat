@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Chat.data.Entities;
+using Chat.domain.Enums;
 
 namespace Chat.domain.Repositories
 {
-    internal class BaseRepository
+    public class BaseRepository
     {
+        protected readonly ChatDbContext DbContext;
+
+        public BaseRepository(ChatDbContext dbContext)
+        {
+            DbContext = dbContext;
+        }
+        protected ResponseResultType SaveChanges()
+        {
+            var hasChanges = DbContext.SaveChanges() > 0;
+            if (hasChanges)
+                return ResponseResultType.Success;
+
+            return ResponseResultType.NoChanges;
+        }
     }
 }
