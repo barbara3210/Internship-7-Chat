@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Chat.data.Entities.Models
 {
-    public class Users
+    public class User
     {
-        public Users(string firstName, string lastName)
+        public User(string firstName, string lastName,string email,string pass)
         {
             FirstName = firstName;
             LastName = lastName;
+            Email = email;
+            PasswordHash = pass;
 
         }
 
-        public int UserId { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

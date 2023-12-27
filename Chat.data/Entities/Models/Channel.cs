@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chat.data.Entities.Models
 {
-    public class Channels
+    public class Channel
     {
         public int ChannelId { get; set; }
         public string ChannelName { get; set; }
