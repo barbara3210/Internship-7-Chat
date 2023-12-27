@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chat.data.Entities.Models
 {
-    public class Channel
+    public class ChatChannel
     {
-        public Channel(string name, int creator)
+        public ChatChannel(string name, int creator)
         {
             ChannelName = name;
             CreatorUserId = creator;

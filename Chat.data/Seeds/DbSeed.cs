@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Chat.data.Entities.Models;
 using System.Text.RegularExpressions;
 
@@ -183,30 +178,30 @@ namespace Chat.data.Seeds
 
             });
 
-            builder.Entity<Channel>()
-            .HasData(new List<Channel>
+            builder.Entity<ChatChannel>()
+            .HasData(new List<ChatChannel>
             {
-                new Channel("dev",3)
+                new ChatChannel("dev",3)
                 {
                     Id = 1,
                 },
-                new Channel("design", 2)
+                new ChatChannel("design", 2)
                 {
                     Id = 2,
                 },
-                new Channel("random",8)
+                new ChatChannel("random",8)
                 {
                     Id = 3,
                 },
-                new Channel("marketing", 2)
+                new ChatChannel("marketing", 2)
                 {
                     Id = 4,
                 },
-                new Channel("multimedia", 9)
+                new ChatChannel("multimedia", 9)
                 {
                     Id = 5,
                 },
-                new Channel("general",10)
+                new ChatChannel("general",10)
                 {
                     Id = 6,
                 },
