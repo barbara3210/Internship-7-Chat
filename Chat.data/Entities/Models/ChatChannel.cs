@@ -11,11 +11,11 @@ namespace Chat.data.Entities.Models
         public ChatChannel(string name, int creator)
         {
             ChannelName = name;
-            CreatorUserId = creator;
+            Creator = creator;
 
         }
         public int Id { get; set; }
         public string ChannelName { get; set; }
-        public int CreatorUserId { get; set; }
+        public int Creator { get; set; }
     }
 }

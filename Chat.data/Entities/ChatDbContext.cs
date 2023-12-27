@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Chat.data.Entities.Models;
 using Microsoft.Extensions.Configuration;
+using System.IO;
+using Chat.data.Entities.Models;
 using Chat.data.Seeds;
-using System.Threading.Channels;
-using System.Collections.Generic;
 
 namespace Chat.data.Entities
 {
@@ -25,10 +24,14 @@ namespace Chat.data.Entities
             modelBuilder.Entity<ChannelMember>()
                 .HasKey(cm => new { cm.ChannelId, cm.UserId });
 
-            //modelBuilder.Entity<ChatChannel>()
-            //.HasForeignKey(c => c.CreatorUserId);
+            modelBuilder.Entity<ChatChannel>()
+                .HasKey(c => c.Id);
 
+            modelBuilder.Entity<ChatChannel>()
+                .Property(c => c.ChannelName)
+                .IsRequired();
 
+           
 
             DbSeed.Seed(modelBuilder);
             base.OnModelCreating(modelBuilder);
@@ -46,7 +49,7 @@ namespace Chat.data.Entities
 
             config.Providers
                 .First()
-                .TryGet("connectionStrings:add:TodoApp:connectionString", out var connectionString);
+                .TryGet("connectionStrings:add:ChatApp:connectionString", out var connectionString);
 
             var options = new DbContextOptionsBuilder<ChatDbContext>()
                 .UseNpgsql(connectionString)

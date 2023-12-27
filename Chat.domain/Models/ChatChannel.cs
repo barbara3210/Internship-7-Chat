@@ -5,6 +5,6 @@ namespace Chat.domain.Models
     {
         public int Id { get; set; }
         public string ChannelName { get; set; }
-        public int CreatorUserId { get; set; }
+        public int Creator{ get; set; }
     }
 }
