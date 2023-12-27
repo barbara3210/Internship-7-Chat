@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Chat.presentation.Helpers
 {
-    internal class Input
+    public class Input
     {
+        public bool IsValidEmail(string email)
+        {
+            var emailRegex = new Regex(@"^[^\s@]+@[^\s@]+\.[^\s@]+$");
+            return emailRegex.IsMatch(email);
+        }
+
     }
 }
