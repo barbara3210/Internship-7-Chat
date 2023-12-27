@@ -19,6 +19,11 @@ namespace Chat.data.Entities
         public ChatDbContext(DbContextOptions<ChatDbContext> options) : base(options)
         {
         }
+
+        public ChatDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ChannelMember>()
