@@ -15,9 +15,6 @@ namespace Chat.domain.Repositories
         {
         }
 
-        public User GetUserByEmail(string email)
-        {
-            return dbContext.Users.FirstOrDefault(u => u.Email == email);
-        }
+        
     }
 }

@@ -4,16 +4,17 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using Chat.data.Entities.Models;
 using Chat.data.Seeds;
+using System.Text.RegularExpressions;
 
 namespace Chat.data.Entities
 {
     public class ChatDbContext:DbContext
     {
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<ChatChannel> Channels { get; set; }
-        public DbSet<Message> Messages { get; set; }
-        public DbSet<ChannelMember> ChannelMembers { get; set; }
+        public DbSet<User> Users => Set<User>();
+        public DbSet<ChatChannel> Channels => Set<ChatChannel>();
+        public DbSet<Message> Messages => Set<Message>();
+        public DbSet<ChannelMember> ChannelMembers => Set<ChannelMember>();
 
 
         public ChatDbContext(DbContextOptions<ChatDbContext> options) : base(options)

@@ -19,11 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
-    <Folder Include="Actions\" />
-    <Folder Include="Extensions\" />
+    <Folder Include="Actions\ChatChannel\" />
+    <Folder Include="Actions\Message\" />
     <Folder Include="Factories\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
 
 </Project>

@@ -14,10 +14,7 @@ namespace Chat.domain.Repositories
         public MessageRepository(ChatDbContext dbContext) : base(dbContext)
         {
         }
-        public IEnumerable<Message> GetMessagesByChannelId(int channelId)
-        {
-            return _dbContext.Messages.Where(m => m.ChannelId == channelId);
-        }
+        
 
     }
 }
