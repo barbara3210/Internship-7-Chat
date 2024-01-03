@@ -19,9 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Actions\ChatChannel\" />
+    <Folder Include="Actions\ChannelMember\" />
     <Folder Include="Actions\Message\" />
-    <Folder Include="Factories\" />
   </ItemGroup>
 
 </Project>

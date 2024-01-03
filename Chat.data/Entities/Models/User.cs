@@ -15,6 +15,15 @@ namespace Chat.data.Entities.Models
             Email = email;
             PasswordHash = pass;
 
+
+        }
+        public User( string email, string pass)
+        {
+            
+            Email = email;
+            PasswordHash = pass;
+
+
         }
 
         public int Id { get; set; }

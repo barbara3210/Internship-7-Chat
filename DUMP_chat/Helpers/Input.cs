@@ -37,6 +37,7 @@ namespace Chat.presentation.Helpers
             foreach (var chat in chats)
                 Write(chat);
         }
+        
 
     }
 }
